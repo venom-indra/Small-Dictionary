@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:not(i) {
+  font-family: "Poppins", sans-serif;
+}
+@keyframes imageAnimation {
+  0% {
+    filter: brightness(100%) contrast(100%) saturate(100%) hue-rotate(0deg);
+  }
+  50% {
+    filter: brightness(70%) contrast(150%) saturate(50%) hue-rotate(180deg);
+  }
+  100% {
+    filter: brightness(100%) contrast(100%) saturate(100%) hue-rotate(360deg);
+  }
+}
+
+body {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: imageAnimation 3s infinite alternate;
+}
+
+.container {
+  background-color: rgb(0, 0, 0);
+  width: 90vmin;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 80px 50px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgb(255, 0, 93);
+}
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-box input {
+  padding: 5px;
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: rgb(234, 234, 234);
+  border-bottom: 3px solid black;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.search-box input:hover {
+  box-shadow: 0 20px 40px rgb(238, 25, 181);
+}
+
+.search-box button {
+  padding: 15px 0;
+  width: 25%;
+  background-color: #0e0e0e;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  border-radius: 500px;
+}
+.search-box button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: rgb(218, 218, 218);
+  box-shadow: 0 20px 40px rgb(238, 25, 181);
+}
+.result {
+  position: relative;
+}
+.result h3 {
+  font-size: 30px;
+  color: #ff0000;
+}
+.result .word {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.result button {
+  background-color: transparent;
+  color: #00d0ff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.result button:hover {
+  color: white;
+  cursor: pointer;
+}
+.result .details {
+  display: flex;
+  gap: 10px;
+  color: #fff200;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+}
+.word-meaning {
+  color: #e100ff;
+  cursor: text;
+}
+.word-example {
+  color: #00ba09;
+  font-style: italic;
+  border-left: 5px solid brown;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+.error {
+  margin-top: 80px;
+  text-align: center;
+}
